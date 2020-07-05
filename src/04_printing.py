@@ -8,10 +8,17 @@ x = 10
 y = 2.24552
 z = "I like turtles!"
 
+print('%(language)s has %(number)03d quote types.' %
+      {'language': "Python", "number": 2})
+
+
 # Using the printf operator (%), print the following feeding in the values of x,
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
-
+print('x is %(x)s, y is %(y).2F, z is %(z)s' %
+    {'x': x, 'y': y, 'z': z})
 # Use the 'format' string method to print the same thing
-
+print ("x is {}, y is {}, z is {}"
+    .format(x,round(y,2),z))
 # Finally, print the same thing using an f-string
+print(f'x is {x}, y is {round(y,2)}, z is {z}')
