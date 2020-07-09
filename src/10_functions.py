@@ -3,11 +3,12 @@
 # YOUR CODE HERE
 
 # Read a number from the keyboard
-# num = input("Enter a number: ")
-# num = int(num)
+
+# Print out "Even!" if the number is even. Otherwise print "Odd"
+
+# YOUR CODE HERE
 
 def is_even(number):
-    # int(number)
     while True:
         try:
             if int(number) == 0:
@@ -26,12 +27,6 @@ def is_even(number):
         except TypeError:
             return'Please try again, but this time enter a number'
             
-
-
-
-# Print out "Even!" if the number is even. Otherwise print "Odd"
-
-# YOUR CODE HERE
 if __name__ == '__main__':
     num = input("Enter a number: ")
     print(is_even(num))
