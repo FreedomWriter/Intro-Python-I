@@ -3,31 +3,36 @@
 # YOUR CODE HERE
 
 # Read a number from the keyboard
-num = input("Enter a number: ")
-num = int(num)
+# num = input("Enter a number: ")
+# num = int(num)
 
 def is_even(number):
+    # int(number)
     while True:
         try:
-            if number == 0:
-                print('Is zero even or odd???')
-                break
+            if int(number) == 0:
+                return'Is zero even or odd???'
+                
             else:
-                if not number % 2:
-                    print("Even!")
-                    break
+                if not int(number) % 2:
+                    return"Even!"
+                    
                 else:
-                    print('Odd')
-                    break
+                    return'Odd'
+                    
         except ValueError:
-            print('Please enter a number')
-            continue
+            return'Please try again, but this time enter a number'
+            
         except TypeError:
-            print('Please enter a number')
+            return'Please try again, but this time enter a number'
+            
 
-is_even(num)
+
 
 # Print out "Even!" if the number is even. Otherwise print "Odd"
 
 # YOUR CODE HERE
+if __name__ == '__main__':
+    num = input("Enter a number: ")
+    print(is_even(num))
 
