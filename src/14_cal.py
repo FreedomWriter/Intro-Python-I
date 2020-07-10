@@ -34,15 +34,14 @@ from datetime import datetime
 
 currDate = str(datetime(year=2020, month=7, day=1))
 current = currDate.split('-')
-# print(current)
-# cal = calendar.prmonth(int(current[0]), int(current[1]))
 
 userInput = sys.argv
 
-def printCal(userArgs = current):
-  if len(userInput) > 1:
-    print(int(userArgs[1]), int(userArgs[2]))
-    return calendar.prmonth(int(userArgs[2]), int(userArgs[1]))
+def printCal(userInput):
+  if  len(userInput) == 2:
+    return calendar.prmonth(int(current[1]), int(userInput[1]))
+  if len(userInput) == 3:
+    return calendar.prmonth(int(userInput[2]), int(userInput[1]))
   else:
     return calendar.prmonth(int(current[0]), int(current[1]))
 
